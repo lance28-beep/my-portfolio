@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
 body {
   font-family: "Josefin Sans", sans-serif;
+  margin: 0;
   /* background-image: url(https://images.unsplash.com/photo-1546788774-2bb47f590283?ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80); */
 }
 .container {
@@ -17,6 +18,7 @@ body {
   max-width: 200px;
   margin: auto;
   margin-top: 48px;
+  margin-left: 4px;
   text-align: center;
   background-color: #f1fea4;
 }
@@ -42,7 +44,7 @@ body {
   margin-top: 0;
   padding: 0;
 }
-#profile-link {
+#nav-link {
   margin: auto;
   color: red;
   display: grid;
@@ -57,12 +59,12 @@ button {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
-#profile-link a {
+#nav-link a {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 1rem;
   padding: 0.5em;
   margin: 0;
   color: grey;
@@ -74,33 +76,33 @@ button:hover {
   color: #f1fea4;
   background-color: gray;
 }
-#twitter:hover {
+.twitter:hover {
   background-color: #1da1f2;
-  color: white;
+  color: white !important;
 }
-#github:hover {
+.github:hover {
   background-color: #24292e;
-  color: white;
+  color: white !important;
 }
-#codepen:hover {
+.codepen:hover {
   background-color: #424242;
-  color: white;
+  color: white !important;
 }
-#linkedin:hover {
+.linkedin:hover {
   background-color: #0e76a8;
-  color: white;
+  color: white !important;
 }
-#Gmail:hover {
+.Gmail:hover {
   background-color: #d44638;
-  color: white;
+  color: white !important;
 }
-#CodeCamp:hover {
+.CodeCamp:hover {
   background-color: #006400;
-  color: white;
+  color: white !important;
 }
-#Facebook:hover {
+.Facebook:hover {
   background-color: #3b5998;
-  color: white;
+  color: white !important;
 }
 
 /* navbar */
@@ -111,6 +113,7 @@ button:hover {
   position: fixed;
   width: 100%;
   z-index: 1;
+  margin: 0 4px;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -123,7 +126,7 @@ button:hover {
   color: gray;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1rem;
   display: block;
 }
 
@@ -136,7 +139,7 @@ button:hover {
   top: 0;
 }
 #logo {
-  font-size: x-large;
+  font-size: 1.5rem;
 }
 
 /* Add a grey background color on mouse-over */
@@ -151,7 +154,7 @@ button:hover {
 #welcome-section {
   text-align: center;
   letter-spacing: 2px;
-  height: 300px;
+  height: 100vh;
   display: flex;
   margin: auto;
   width: 95%;
@@ -160,7 +163,7 @@ button:hover {
   align-self: center;
 }
 #projects {
-  height: 300px;
+  height: 100vh;
   text-align: center;
 }
 
@@ -168,11 +171,53 @@ button:hover {
   display: flex;
   flex-direction: row;
   width: 100%;
+  justify-self: center;
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
-  flex: 1;
+  width: 80%;
+  justify-content: center;
+}
+iframe {
+  margin: auto;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 10px;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  ...;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  ...;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  ...;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  ...;
 }
